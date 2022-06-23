@@ -1,0 +1,83 @@
+@mixin pym {
+    padding: 10px;
+    margin: 10px;
+    
+    
+}
+@mixin wyh_redes {
+    width: 45px;
+    height: 45;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(185, 189, 181);
+    .titulo{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-family: 'Caveat', cursive;
+        h1 {
+            font-weight: 1000;
+            font-size: 60px;
+        }
+    }
+    .redes{
+        display: flex;
+        list-style: none;
+        justify-content: right;
+        @include pym()
+    }
+    nav{
+        width: 80%;
+        background-color: rgb(185, 189, 181);
+        margin: 10px auto;
+        .menu1 {
+            list-style-type: none;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .nav-item{
+                padding: 10px;
+                margin: 10px;
+                &:hover{
+                    background-color: rgb(72, 70, 73);
+                    border-radius: 15%;
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 30px;
+                    color: azure;
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .container{
+            background-color: rgb(233, 159, 252);
+            padding: 10px;
+            
+        }
+    }
+}
+
+.mb-3{
+    width: 500px;
+    @include pym()
+
+}
+.submit {
+    @include pym()
+
+}
+.redes a{
+    @include wyh_redes()
+}
